@@ -16,6 +16,12 @@ docker run -d -p 8080:8080 puckel/docker-airflow webserver
 ```
 
 Check `http://localhost:8080/admin/`
+![alt text](https://raw.githubusercontent.com/TheJacobKim/cloud-study-2019/master/photos/airflow_default.png)
+
+**Use Cases**  
+Slack Notification Image  
+![alt text](https://raw.githubusercontent.com/TheJacobKim/cloud-study-2019/master/photos/airflow_slack.png)
+
 
 ## 4. Stop Docker 
 ```
@@ -118,6 +124,7 @@ services:
         command: worker
 ```
 http://localhost:8080/admin/
+
 
 ## 6. Docker compose
 ```
