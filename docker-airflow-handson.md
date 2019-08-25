@@ -1,16 +1,20 @@
 # Docker + Airflow
 
-## 1. Pull Docker image
+## What is Airflow?
+https://airflow.apache.org
+
+## Steps
+### 1. Pull Docker image
 ```
 docker pull puckel/docker-airflow
 ```
 
-## 2. Install Extra Airflow 
+### 2. Install Extra Airflow 
 ```
 docker build --rm --build-arg AIRFLOW_DEPS="datadog,dask" --build-arg PYTHON_DEPS="flask_oauthlib>=0.9" -t puckel/docker-airflow .
 ```
 
-## 3. Run Docker
+### 3. Run Docker
 ```
 docker run -d -p 8080:8080 puckel/docker-airflow webserver
 ```
@@ -23,12 +27,12 @@ Slack Notification Image
 ![alt text](https://raw.githubusercontent.com/TheJacobKim/cloud-study-2019/master/photos/airflow_slack.png)
 
 
-## 4. Stop Docker 
+### 4. Stop Docker 
 ```
 docker stop $(docker ps -a -q)
 ```
 
-## 5. Airflow CeleryWorker
+### 5. Airflow CeleryWorker
 ```
 version: '2.1'
 services:
@@ -126,7 +130,7 @@ services:
 http://localhost:8080/admin/
 
 
-## 6. Docker compose
+### 6. Docker compose
 ```
 docker-compose -f docker-compose-CeleryExecutor.yml run --rm webserver airflow list_dags
 ```
