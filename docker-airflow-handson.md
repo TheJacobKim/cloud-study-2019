@@ -117,6 +117,7 @@ services:
             # - REDIS_PASSWORD=redispass
         command: worker
 ```
+http://localhost:8080/admin/
 
 ## 6. Docker compose
 ```
